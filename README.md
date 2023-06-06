@@ -1,2 +1,2 @@
-# de-mo
+# demo
 demo
