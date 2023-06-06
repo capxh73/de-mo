@@ -8,10 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    container: node:18.16.0
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: bash ./hello-bash.sh
+      run: bash test/hello-bash.sh
