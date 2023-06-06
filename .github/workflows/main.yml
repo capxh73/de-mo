@@ -27,12 +27,6 @@ jobs:
       uses: docker/setup-buildx-action@v2.5.0
       with:
         version: v0.3.0
-    
-    - name: Build the Docker image
-      run: docker build --file DockerfilePath -t ${{ secrets.DOCKERHUB_USERNAME }}/frontend-project:latest .
-    
-    - name: Docker image push
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend-project:latest    
-    
+        
     - name: Build Docker Image
       run: bash test/hello-bash.sh
