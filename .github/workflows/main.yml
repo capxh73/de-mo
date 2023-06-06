@@ -14,4 +14,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: test/hello bash.sh
+      run: bash ./test/hello bash.sh
