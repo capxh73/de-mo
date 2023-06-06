@@ -18,8 +18,8 @@ docker image build -t test .
 # 生成容器
 docker container run --rm -p 8000:3000 -it test /bin/bash
 
-# 执行下面的命令
-node test/hello-world.js
-
 # 完成
 echo "success!"
+
+# 执行下面的命令
+node test/hello-world.js
