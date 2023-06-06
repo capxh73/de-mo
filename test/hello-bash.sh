@@ -21,4 +21,5 @@ docker container run --rm -p 8000:3000 -it test /bin/bash
 # 执行下面的命令
 node test/hello-world.js
 
-# 更改
+# 完成
+echo "success!"
