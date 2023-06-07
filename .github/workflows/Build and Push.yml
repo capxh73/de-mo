@@ -33,8 +33,8 @@ jobs:
       
       # 登录到 dockerhub，使用 GitHub secrets 传入账号密码，密码被加密存储在 GitHub 服务器，添加方法见下图。
     - name: Log into registry
-      run: echo "${{ secrets.ACCESS_TOKEN }}" | docker login -u libra146 --password-stdin
-  
+      run: echo "${{ secrets.DOCKER_USERNAME }}" | docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
+
     - name: Push image
       run: |
           # 拼接镜像 id，这个镜像 id 就是在使用 docker 镜像时 pull 后面的名字。
