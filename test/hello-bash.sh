@@ -30,7 +30,7 @@ echo "success!"
 docker login --username=$DOCKERHUB_USERNAME --password=$DOCKERHUB_PASSWORD
 
 #为本地的 image 标注用户名和版本。
-docker image tag $IMAGE_NAME capxh73/$REPOSITORY:$TAG
+docker image tag $IMAGE_NAME:$TAG capxh73/$REPOSITORY:$TAG
 
 #发布 image 文件
 docker push capxh73/$REPOSITORY:$TAG
