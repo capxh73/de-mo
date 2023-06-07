@@ -45,7 +45,7 @@ jobs:
           IMAGE_ID=capxh73/$IMAGE_NAME
 
           # 将所有的大写字母转为小写
-          IMAGE_ID=$(echo test | tr '[A-Z]' '[a-z]')
+          # IMAGE_ID=$(echo test | tr '[A-Z]' '[a-z]')
 
           # 从 GitHub.ref 中取出版本
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
