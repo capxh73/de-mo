@@ -20,6 +20,3 @@ docker container run --rm -p 8000:3000 -it test /bin/bash
 
 # 完成
 echo "success!"
-
-# 执行下面的命令
-node test/hello-world.js
