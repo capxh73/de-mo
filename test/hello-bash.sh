@@ -13,9 +13,9 @@ echo "RUN npm install --registry=https://registry.npm.taobao.org" >> Dockerfile
 echo "EXPOSE 3000" >> Dockerfile
 
 # 镜像名和仓库名和标签号
-IMAGE_NAME = test
-REPOSITORY = test
-TAG = latest
+IMAGE_NAME=test
+REPOSITORY=test
+TAG=latest
 
 # 构建 image 文件
 docker image build -t $IMAGE_NAME:$TAG . 
