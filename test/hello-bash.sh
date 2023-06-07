@@ -18,7 +18,7 @@ REPOSITORY = test
 TAG = latest
 
 # 构建 image 文件
-docker image build -t $IMAGE_NAME . 
+docker image build -t $IMAGE_NAME:$TAG . 
 
 # 生成容器
 docker container run --rm -p 8000:3000 -it $IMAGE_NAME:$TAG /bin/bash
