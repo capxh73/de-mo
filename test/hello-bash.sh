@@ -14,7 +14,6 @@ echo "EXPOSE 3000" >> Dockerfile
 
 # 镜像名和仓库名和标签号
 IMAGE_NAME="test"
-REPOSITORY="tests"
 TAG="latest"
 
 # 构建 image 文件
@@ -30,10 +29,10 @@ echo "success!"
 docker login --username=$DOCKERHUB_USERNAME --password=$DOCKERHUB_PASSWORD
 
 #为本地的 image 标注用户名和版本。
-docker image tag $IMAGE_NAME capxh73/$REPOSITORY:$TAG
+docker image tag $IMAGE_NAME capxh73/$IMAGE_NAME:$TAG
 
 #发布 image 文件
-docker push capxh73/$REPOSITORY:$TAG
+docker push capxh73/$IMAGE_NAME:$TAG
 
 # 执行下面的命令
 #node test/hello-world.js
