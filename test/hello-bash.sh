@@ -13,7 +13,7 @@ echo "RUN npm install --registry=https://registry.npm.taobao.org" >> Dockerfile
 echo "EXPOSE 3000" >> Dockerfile
 
 # 镜像名
-IMAGE_NAME = test
+IMAGE_NAME=test
 
 # 构建 image 文件
 docker image build -t &IMAGE_NAME . 
