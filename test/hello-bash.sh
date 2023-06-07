@@ -14,7 +14,7 @@ echo "EXPOSE 3000" >> Dockerfile
 
 # 镜像名和仓库名和标签号
 IMAGE_NAME="test"
-REPOSITORY="test"
+REPOSITORY="tests"
 TAG="latest"
 
 # 构建 image 文件
