@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  # 设置 docker 镜像名
+  IMAGE_NAME: test
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -38,7 +42,7 @@ jobs:
     - name: Push image
       run: |
           # 拼接镜像 id，这个镜像 id 就是在使用 docker 镜像时 pull 后面的名字。
-          IMAGE_ID=capxh73/test
+          IMAGE_ID=capxh73/$IMAGE_NAME
 
           # 将所有的大写字母转为小写
           IMAGE_ID=$(echo test | tr '[A-Z]' '[a-z]')
@@ -50,11 +54,11 @@ jobs:
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
 
           # Use Docker `latest` tag convention
-          [ "$VERSION" == "master" ] && VERSION=latest
+          [ "$VERSION" == "main" ] && VERSION=latest
 
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
           # 设置镜像 id 和版本号
-          docker tag test $IMAGE_ID:$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           # 进行 push
           docker push $IMAGE_ID:$VERSION
