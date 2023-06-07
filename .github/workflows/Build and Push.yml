@@ -59,8 +59,5 @@ jobs:
           # echo IMAGE_ID=$IMAGE_ID
           # echo VERSION=$VERSION
           # 设置镜像 id 和版本号
-          docker tag $IMAGE_NAME 
-          # $IMAGE_ID:$VERSION
-          # 进行 push
-          docker push $IMAGE_NAME
-          # $IMAGE_ID:$VERSION
+          docker image tag $IMAGE_NAME capxh73/test
+          docker push capxh73/test
